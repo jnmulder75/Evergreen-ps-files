@@ -7,7 +7,7 @@ $allVersions = Get-MicrosoftEdge
 $mostRecent = $allVersions | Sort-Object -Descending -Property 'Version' | Select-Object -First 1 | Select-Object -ExpandProperty 'Version'
 $allOnVersion = $allVersions | Where-Object { $_.channel -eq 'Stable' }
 $myVersion = $allOnVersion | Where-Object { $_.Architecture -eq 'x64' -and $_.Platform -eq 'Windows' -and $_.URI -like "*.msi"}
-$myVersion = $allOnVersion | Where-Object { $_.Architecture -eq 'x64' -and $_.Platform -eq 'Windows' -and $_.URI -like "*.msi"}
+
 $fileName = split-path $myVersion.uri -Leaf
 $outFile = join-path 'c:\CustomizerArtifacts' $fileName
 if (-not(Test-Path $outFile)) {
