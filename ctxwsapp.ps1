@@ -8,7 +8,6 @@ $mostRecent = $allVersions | Sort-Object -Descending -Property 'Version' | Selec
 $allOnVersion = $allVersions | Where-Object { $_.version -eq $mostRecent }
 
 $fileName = split-path $allOnVersion.uri -Leaf -Verbose
-# $outFile = join-path 'c:\CustomizerArtifacts' $fileName
 $outFile = join-path 'c:\CustomizerArtifacts' 'CitrixWorkspaceApp.exe'
 Invoke-WebRequest $allOnVersion.uri -OutFile $outFile
 
