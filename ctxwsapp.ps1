@@ -11,6 +11,6 @@ $fileName = split-path $allOnVersion.uri -Leaf -Verbose
 $outFile = join-path 'c:\CustomizerArtifacts' 'CitrixWorkspaceApp.exe'
 Invoke-WebRequest $allOnVersion.uri -OutFile $outFile
 
-Start-Process -FilePath (Join-Path $BuildDir "CitrixWorkspaceApp.exe") -Argument '/silent /AutoUpdateCheck=disabled /noreboot' -Wait
-Remove-Item $outFile
-Write-Output 'Citrix Workspace App Installed'
+#Start-Process -FilePath (Join-Path $BuildDir "CitrixWorkspaceApp.exe") -Argument '/silent /AutoUpdateCheck=disabled /noreboot' -Wait
+#Remove-Item $outFile
+#Write-Output 'Citrix Workspace App Installed'
