@@ -14,7 +14,7 @@ $outFile = join-path 'c:\CustomizerArtifacts' 'windowsdesktop-runtime-win-x64.ex
 if (-not(Test-Path $outFile)) {
     Invoke-WebRequest $myVersion.uri -OutFile $outFile
 }
-Start-Process $outFile -Argument '/install /quiet /norestart' -Wait
+#Start-Process $outFile -Argument '/install /quiet /norestart' -Wait
 
-Remove-Item $outFile
-Write-Output 'DotNET Installed'
+#Remove-Item $outFile
+#Write-Output 'DotNET Installed'
