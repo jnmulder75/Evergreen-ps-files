@@ -14,6 +14,6 @@ if (-not(Test-Path $outFile)) {
     Invoke-WebRequest $myVersion.uri -OutFile $outFile
 }
 
-Start-Process -FilePath msiexec.exe -Argument "/i $outFile /quiet" -Wait
-Remove-Item $outFile
-Write-Output 'GoogleChrome Installed'
+#Start-Process -FilePath msiexec.exe -Argument "/i $outFile /quiet" -Wait
+#Remove-Item $outFile
+#Write-Output 'GoogleChrome Installed'
