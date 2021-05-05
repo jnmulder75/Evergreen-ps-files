@@ -13,6 +13,6 @@ $outFile = join-path 'c:\CustomizerArtifacts' $fileName
 if (-not(Test-Path $outFile)) {
     Invoke-WebRequest $myVersion.uri -OutFile $outFile
 }
-#Start-Process -FilePath msiexec.exe -Argument "/i $outFile /quiet" -Wait
+Start-Process -FilePath msiexec.exe -Argument "/i $outFile /quiet" -Wait
 #Remove-Item $outFile
-#Write-Output 'EdgeChromium Installed'
+Write-Output 'EdgeChromium Installed'
